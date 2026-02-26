@@ -1,0 +1,49 @@
+.calculator {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.buttonGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.zeroButton {
+  grid-column: span 1;
+}
+
+/* タブレット以下のサイズでの調整 */
+@media (max-width: 768px) {
+  .calculator {
+    max-width: 100%;
+    padding: 10px;
+  }
+  
+  .main {
+    padding: 20px;
+  }
+  
+  .buttonGrid {
+    gap: 8px;
+  }
+}
+
+/* スマートフォンサイズでの調整（要件外だが基本的な対応） */
+@media (max-width: 480px) {
+  .main {
+    padding: 15px;
+  }
+  
+  .buttonGrid {
+    gap: 6px;
+  }
+}

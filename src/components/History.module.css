@@ -1,0 +1,125 @@
+.history {
+  background-color: #f5f5f7;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.clearButton {
+  background-color: #ff3b30;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.clearButton:hover {
+  background-color: #d32f2f;
+}
+
+.clearButton:focus-visible {
+  outline: 3px solid #007aff;
+  outline-offset: 2px;
+}
+
+.empty {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+  font-style: italic;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
+}
+
+.item:hover {
+  background-color: #fafafa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transform: translateX(5px);
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.expression {
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 10px;
+}
+
+.equals {
+  color: #999;
+  margin: 0 10px;
+  font-weight: 300;
+}
+
+.result {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #007aff;
+  min-width: 60px;
+  text-align: right;
+}
+
+/* スクロールバーのスタイリング */
+.history::-webkit-scrollbar {
+  width: 8px;
+}
+
+.history::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.history::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.history::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
