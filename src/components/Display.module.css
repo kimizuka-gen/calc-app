@@ -1,0 +1,58 @@
+.display {
+  background-color: #000;
+  color: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  word-break: break-all;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.expression {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 10px;
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.result {
+  font-size: 1.2rem;
+  color: #a0a0a0;
+  font-weight: 400;
+}
+
+.error {
+  font-size: 1.5rem;
+  color: #ff3b30;
+  font-weight: 500;
+  text-align: right;
+  width: 100%;
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+/* アクセシビリティ: スクリーンリーダー用の視覚表現 */
+.display[role="alert"] {
+  border: 2px solid #ff3b30;
+}

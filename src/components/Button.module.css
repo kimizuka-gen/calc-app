@@ -1,0 +1,80 @@
+.button {
+  padding: 20px;
+  font-size: 1.5rem;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  font-weight: 500;
+  min-width: 60px;
+  min-height: 60px;
+}
+
+.button:hover:not(.disabled) {
+  background-color: #e8e8e8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button:active:not(.disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 演算子ボタン */
+.button.operator {
+  background-color: #ff9500;
+  color: white;
+  font-weight: 600;
+}
+
+.button.operator:hover:not(.disabled) {
+  background-color: #e68600;
+}
+
+/* 特殊機能ボタン (AC, Del) */
+.button.special {
+  background-color: #d4d4d2;
+  color: #000;
+  font-weight: 600;
+}
+
+.button.special:hover:not(.disabled) {
+  background-color: #c0c0be;
+}
+
+/* イコールボタン */
+.button.equals {
+  background-color: #34c759;
+  color: white;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.button.equals:hover:not(.disabled) {
+  background-color: #2fb84d;
+}
+
+/* 数字ボタン */
+.button.default {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #e0e0e0;
+}
+
+.button.default:hover:not(.disabled) {
+  background-color: #f5f5f5;
+  border-color: #d0d0d0;
+}
+
+/* フォーカス時のスタイル */
+.button:focus-visible {
+  outline: 3px solid #007aff;
+  outline-offset: 2px;
+}
