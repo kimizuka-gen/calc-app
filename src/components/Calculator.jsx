@@ -94,7 +94,10 @@ function Calculator() {
       if (!isWithinDigitLimit(calculatedResult, config.maxDigits)) {
         setError(`エラー: 数値が大きすぎます（最大${config.maxDigits}桁）`);
         setTimeout(() => {
-          handleClear();
+          setExpression('');
+          setResult(null);
+          setError(null);
+          setLastResult(null);
         }, 2000);
         return;
       }
@@ -114,13 +117,16 @@ function Calculator() {
       if (err.message.includes('ゼロ除算')) {
         setError('エラー: ゼロで割ることはできません');
         setTimeout(() => {
-          handleClear();
+          setExpression('');
+          setResult(null);
+          setError(null);
+          setLastResult(null);
         }, 2000);
       } else {
         setError('エラー: 不正な式です');
       }
     }
-  }, [expression, history, config.maxDigits, config.historyCount, handleClear]);
+  }, [expression, history, config.maxDigits, config.historyCount]);
   
   /**
    * 全クリアハンドラー
