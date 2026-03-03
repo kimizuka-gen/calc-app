@@ -2,6 +2,10 @@
 
 整数の四則演算に対応したWebベースの電卓アプリケーションです。
 
+[![Deploy to Azure Static Web Apps](https://github.com/{owner}/{repo}/actions/workflows/deploy-app.yml/badge.svg?branch=release)](https://github.com/{owner}/{repo}/actions/workflows/deploy-app.yml)
+
+> **Note**: `{owner}/{repo}` をご自身のGitHubリポジトリ情報に置き換えてください（例: `kimizuka/calc-app`）
+
 ## 機能
 
 - ✅ 四則演算（加算、減算、乗算、除算）
