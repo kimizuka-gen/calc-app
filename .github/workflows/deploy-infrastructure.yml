@@ -1,9 +1,7 @@
 name: Deploy Azure Infrastructure
 
 on:
-  push:
-    branches:
-      - release
+  workflow_dispatch:  # Manual trigger only
 
 permissions:
   id-token: write  # Required for OIDC authentication
